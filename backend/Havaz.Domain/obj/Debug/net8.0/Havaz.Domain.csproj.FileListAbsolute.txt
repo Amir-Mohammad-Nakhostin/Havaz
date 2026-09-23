@@ -1,0 +1,11 @@
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\bin\Debug\net8.0\Havaz.Domain.deps.json
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\bin\Debug\net8.0\Havaz.Domain.dll
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\bin\Debug\net8.0\Havaz.Domain.pdb
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\Havaz.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\Havaz.Domain.AssemblyInfoInputs.cache
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\Havaz.Domain.AssemblyInfo.cs
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\Havaz.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\Havaz.Domain.dll
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\refint\Havaz.Domain.dll
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\Havaz.Domain.pdb
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz\backend\Havaz.Domain\obj\Debug\net8.0\ref\Havaz.Domain.dll

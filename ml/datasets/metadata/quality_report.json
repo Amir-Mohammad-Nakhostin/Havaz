@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "datasetVersion": "1.0.0",
+    "labelDefinitionVersion": "utci-strong-v1",
+    "featureSchemaVersion": "environmental-v1",
+    "buildTimestampUtc": "2026-09-01T19:11:40.518180+00:00",
+    "thermofeelVersion": "2.3.0",
+    "sources": {
+      "weather": "https://archive-api.open-meteo.com/v1/archive",
+      "air_quality": "https://air-quality-api.open-meteo.com/v1/air-quality"
+    },
+    "gateFailures": []
+  },
+  "quality": {
+    "gates": {
+      "completeness": {
+        "status": "PASS",
+        "detail": "rows=368208, expected_weather_rows=368208"
+      },
+      "missingness": {
+        "status": "PASS",
+        "detail": {
+          "temperature": 0.0,
+          "apparentTemperature": 0.0,
+          "humidity": 0.0,
+          "precipitationAmount": 0.0,
+          "snowfall": 0.0,
+          "windSpeed": 0.0,
+          "pm25": 0.5127,
+          "pm10": 0.5127,
+          "aqi": 0.5131,
+          "o3": 0.5127,
+          "no2": 0.5127,
+          "utci": 0.0
+        }
+      },
+      "duplicates": {
+        "status": "PASS",
+        "detail": 0
+      },
+      "physical_ranges": {
+        "status": "PASS",
+        "detail": "humidity 0-100, precip/snow/wind >=0, temp -45..55"
+      },
+      "timestamps": {
+        "status": "PASS",
+        "detail": "monotonic UTC per city"
+      },
+      "geographic": {
+        "status": "PASS",
+        "detail": {
+          "Tehran": {
+            "requested": [
+              35.6892,
+              51.389
+            ],
+            "returned": [
+              35.676624,
+              51.42857
+            ],
+            "distanceKm": 3.84,
+            "grid_ok": true
+          },
+          "Shiraz": {
+            "requested": [
+              29.5918,
+              52.5837
+            ],
+            "returned": [
+              29.56063,
+              52.604164
+            ],
+            "distanceKm": 3.99,
+            "grid_ok": true
+          },
+          "Isfahan": {
+            "requested": [
+              32.6546,
+              51.668
+            ],
+            "returned": [
+              32.653778,
+              51.69512
+            ],
+            "distanceKm": 2.54,
+            "grid_ok": true
+          },
+          "Mashhad": {
+            "requested": [
+              36.2605,
+              59.6168
+            ],
+            "returned": [
+              36.309315,
+              59.648438
+            ],
+            "distanceKm": 6.12,
+            "grid_ok": true
+          },
+          "Ahvaz": {
+            "requested": [
+              31.3183,
+              48.6706
+            ],
+            "returned": [
+              31.3181,
+              48.700836
+            ],
+            "distanceKm": 2.87,
+            "grid_ok": true
+          },
+          "Tabriz": {
+            "requested": [
+              38.0962,
+              46.2738
+            ],
+            "returned": [
+              38.066784,
+              46.27187
+            ],
+            "distanceKm": 3.28,
+            "grid_ok": true
+          }
+        }
+      },
+      "units": {
+        "status": "PASS",
+        "detail": "wind km/h (max<200); documented in DATASET_DESIGN.md"
+      },
+      "utci_validity": {
+        "status": "PASS",
+        "detail": "utci coverage=1.0000"
+      },
+      "utci_nan_inf": {
+        "status": "PASS",
+        "detail": "no NaN/inf"
+      },
+      "utci_range_hard": {
+        "status": "PASS",
+        "detail": "min=-41.0 max=69.4"
+      },
+      "utci_temperature_correlation": {
+        "status": "PASS",
+        "detail": "corr=0.786"
+      },
+      "label_distribution": {
+        "status": "PASS",
+        "detail": {
+          "positive": 88067,
+          "negative": 280141,
+          "positive_rate": 0.2392
+        }
+      }
+    },
+    "cities": {
+      "Tehran": {
+        "requested": [
+          35.6892,
+          51.389
+        ],
+        "returned": [
+          35.676624,
+          51.42857
+        ],
+        "distanceKm": 3.84,
+        "grid_ok": true
+      },
+      "Shiraz": {
+        "requested": [
+          29.5918,
+          52.5837
+        ],
+        "returned": [
+          29.56063,
+          52.604164
+        ],
+        "distanceKm": 3.99,
+        "grid_ok": true
+      },
+      "Isfahan": {
+        "requested": [
+          32.6546,
+          51.668
+        ],
+        "returned": [
+          32.653778,
+          51.69512
+        ],
+        "distanceKm": 2.54,
+        "grid_ok": true
+      },
+      "Mashhad": {
+        "requested": [
+          36.2605,
+          59.6168
+        ],
+        "returned": [
+          36.309315,
+          59.648438
+        ],
+        "distanceKm": 6.12,
+        "grid_ok": true
+      },
+      "Ahvaz": {
+        "requested": [
+          31.3183,
+          48.6706
+        ],
+        "returned": [
+          31.3181,
+          48.700836
+        ],
+        "distanceKm": 2.87,
+        "grid_ok": true
+      },
+      "Tabriz": {
+        "requested": [
+          38.0962,
+          46.2738
+        ],
+        "returned": [
+          38.066784,
+          46.27187
+        ],
+        "distanceKm": 3.28,
+        "grid_ok": true
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+dataset:
+  version: 1.0.0
+  cities:
+    - {name: Tehran,  lat: 35.6892, lon: 51.3890}
+    - {name: Shiraz,  lat: 29.5918, lon: 52.5837}
+    - {name: Isfahan, lat: 32.6546, lon: 51.6680}
+    - {name: Mashhad, lat: 36.2605, lon: 59.6168}
+    - {name: Ahvaz,   lat: 31.3183, lon: 48.6706}
+    - {name: Tabriz,  lat: 38.0962, lon: 46.2738}
+  date_range: {train: "2019-01-01/2023-12-31", validation: "2024-01-01/2024-12-31", test: "2025-01-01/2025-12-31"}
+  geographic_holdout_city: Ahvaz
+  timezone: Asia/Tehran
+  sources:
+    weather: "https://archive-api.open-meteo.com/v1/archive (ERA5, CC BY 4.0)"
+    air_quality: "https://air-quality-api.open-meteo.com/v1/air-quality (CAMS, CC BY 4.0; coverage from 2021)"
+  aqi_standard: european_aqi

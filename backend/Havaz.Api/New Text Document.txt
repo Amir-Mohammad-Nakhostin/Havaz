@@ -1,0 +1,115 @@
+
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz>powershell -Command "$p=Get-Content 'backend\Havaz.Api\Program.cs'; $p[0..110]"
+using System.Security.Claims;
+using System.Text.Json;
+using System.Threading.RateLimiting;
+using Havaz.Application;
+using Havaz.Domain;
+using Havaz.Infrastructure;
+using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.EntityFrameworkCore;
+
+const string CsrfCookie = "HAVAZ.CSRF";
+const string CsrfHeader = "X-CSRF-TOKEN";
+var builder = WebApplication.CreateBuilder(args);
+var isDev = builder.Environment.IsDevelopment();
+var origins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? (isDev ? new[] { "http://localhost:5173", "http://127.0.0.1:5173" } : Array.Empty<string>());
+
+builder.Services.AddCors(o => o.AddDefaultPolicy(p => p.WithOrigins(origins).AllowAnyHeader().WithMethods("GET", "POST", "DELETE").AllowCredentials()));
+builder.Services.AddDbContext<HavazDbContext>(o => o.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(o =>
+{
+    o.Cookie.Name = "HAVAZ.AUTH"; o.Cookie.HttpOnly = true; o.Cookie.SameSite = SameSiteMode.Lax;
+    o.Cookie.SecurePolicy = isDev ? CookieSecurePolicy.SameAsRequest : CookieSecurePolicy.Always;
+    o.ExpireTimeSpan = TimeSpan.FromHours(12); o.SlidingExpiration = true;
+    o.Events.OnRedirectToLogin = c => { c.Response.StatusCode = 401; return Task.CompletedTask; };
+});
+builder.Services.AddAuthorization();
+builder.Services.AddAntiforgery(o => { o.HeaderName = CsrfHeader; o.Cookie.Name = "HAVAZ.AFT"; o.Cookie.HttpOnly = true; });
+builder.Services.AddRateLimiter(o =>
+{
+    o.RejectionStatusCode = 429;
+    o.AddPolicy("auth", c => RateLimitPartition.GetFixedWindowLimiter(c.Connection.RemoteIpAddress?.ToString() ?? "anon", _ => new FixedWindowRateLimiterOptions { PermitLimit = 10, Window = TimeSpan.FromMinutes(1) }));
+});
+builder.Services.AddTransient<RetryHandler>();
+builder.Services.AddHttpClient<IWeatherProvider, OpenMeteoWeatherProvider>(c => { c.BaseAddress = new Uri(builder.Configuration["Providers:WeatherBaseUrl"] ?? "https://api.open-meteo.com/"); c.Timeout = TimeSpan.FromSeconds(10); }).AddHttpMessageHandler<RetryHandler>();
+builder.Services.AddHttpClient<IAirQualityProvider, OpenMeteoAirQualityProvider>(c => { c.BaseAddress = new Uri(builder.Configuration["Providers:AirQualityBaseUrl"] ?? "https://air-quality-api.open-meteo.com/"); c.Timeout = TimeSpan.FromSeconds(10); }).AddHttpMessageHandler<RetryHandler>();
+builder.Services.AddHttpClient<IMlPredictionProvider, PythonMlPredictionProvider>(c => { c.BaseAddress = new Uri(builder.Configuration["Ml:BaseUrl"] ?? "http://localhost:8001/"); c.Timeout = TimeSpan.FromSeconds(5); });
+builder.Services.AddScoped<IAnalysisService, AnalysisService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+var app = builder.Build();
+app.UseRateLimiter();
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
+app.Use(async (ctx, next) =>
+{
+    ctx.Response.Headers["X-Content-Type-Options"] = "nosniff";
+    ctx.Response.Headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
+    ctx.Response.Headers["X-Frame-Options"] = "DENY";
+    ctx.Response.Headers["Content-Security-Policy"] = "default-src 'none'; frame-ancestors 'none'";
+    await next();
+});
+// CSRF: double-submit cookie. Cookie-based auth + SameSite=Lax + explicit CORS origins;
+// every authenticated state-changing request must echo the HAVAZ.CSRF cookie value in X-CSRF-TOKEN.
+app.Use(async (ctx, next) =>
+{
+    var stateChanging = HttpMethods.IsPost(ctx.Request.Method) || HttpMethods.IsPut(ctx.Request.Method) || HttpMethods.IsPatch(ctx.Request.Method) || HttpMethods.IsDelete(ctx.Request.Method);
+    if (ctx.User.Identity?.IsAuthenticated == true && stateChanging
+        && !ctx.Request.Path.StartsWithSegments("/api/auth/logout") && !ctx.Request.Path.StartsWithSegments("/api/auth/login") && !ctx.Request.Path.StartsWithSegments("/api/auth/register"))
+    {
+        var header = ctx.Request.Headers[CsrfHeader].ToString();
+        var cookie = ctx.Request.Cookies[CsrfCookie];
+        if (string.IsNullOrEmpty(header) || string.IsNullOrEmpty(cookie) || header.Length < 16 || header != cookie)
+        {
+            ctx.Response.StatusCode = 403;
+            await ctx.Response.WriteAsJsonAsync(new ApiEnvelope<object>(false, null, new ApiError("CSRF_VALIDATION_FAILED", "Ø¯Ø±Ø®ÙˆØ§Ø³Øª Ù†Ø§Ù…Ø¹ØªØ¨Ø± Ø§Ø³Øª."), ctx.TraceIdentifier));
+            return;
+        }
+    }
+    await next();
+});
+
+static Guid? UserId(HttpContext ctx) => Guid.TryParse(ctx.User.FindFirstValue(ClaimTypes.NameIdentifier), out var id) ? id : null;
+static IResult Unauthenticated(HttpContext ctx) => Results.Json(new ApiEnvelope<object>(false, null, new ApiError("UNAUTHENTICATED", "Ø¨Ø±Ø§ÛŒ Ù…Ø´Ø§Ù‡Ø¯Ù‡ Ø§ÛŒÙ† Ø¨Ø®Ø´ Ø¨Ø§ÛŒØ¯ ÙˆØ§Ø±Ø¯ Ø­Ø³Ø§Ø¨ Ú©Ø§Ø±Ø¨Ø±ÛŒ Ø´ÙˆÛŒØ¯."), ctx.TraceIdentifier), statusCode: 401);
+static void IssueCsrf(HttpContext ctx)
+{
+    var token = Convert.ToBase64String(System.Security.Cryptography.RandomNumberGenerator.GetBytes(32));
+    ctx.Response.Cookies.Append(CsrfCookie, token, new CookieOptions { HttpOnly = false, SameSite = SameSiteMode.Lax, Secure = ctx.Request.IsHttps, Path = "/" });
+}
+
+app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
+
+if (isDev)
+{
+    app.MapGet("/api/diagnostics", async (
+        HavazDbContext db,
+        IWeatherProvider weather,
+        IAirQualityProvider airQuality,
+        IMlPredictionProvider ml,
+        CancellationToken ct) =>
+    {
+        var database = false;
+        try
+        {
+            database = await db.Database.CanConnectAsync(ct);
+        }
+        catch
+        {
+        }
+
+        var weatherProvider = false;
+        try
+        {
+            var result = await weather.GetWeather(29.5918, 52.5837, ct);
+            weatherProvider = result is not null;
+        }
+        catch
+        {
+
+C:\Users\Mardani System\Desktop\PROJRCTS\Havaz>

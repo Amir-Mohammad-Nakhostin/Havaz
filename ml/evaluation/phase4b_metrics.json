@@ -1,0 +1,66 @@
+{
+  "validation": [
+    {
+      "model": "LogisticRegression",
+      "precision": 0.6207819154745003,
+      "recall": 0.9159684176603287,
+      "f1": 0.740024734752327,
+      "roc_auc": 0.9535969860399361,
+      "pr_auc": 0.8692441409541841,
+      "brier": 0.10131969238856471,
+      "balanced_acc": 0.8718008473688321,
+      "confusion": [
+        [
+          33347,
+          6945
+        ],
+        [
+          1043,
+          11369
+        ]
+      ]
+    },
+    {
+      "model": "RandomForest",
+      "precision": 0.8951769449007018,
+      "recall": 0.9660006445375443,
+      "f1": 0.9292412617220801,
+      "roc_auc": 0.995682194728722,
+      "pr_auc": 0.9866446763093034,
+      "brier": 0.026551829010981506,
+      "balanced_acc": 0.9655775088070429,
+      "confusion": [
+        [
+          38888,
+          1404
+        ],
+        [
+          422,
+          11990
+        ]
+      ]
+    },
+    {
+      "model": "GradientBoosting",
+      "precision": 0.942098317387001,
+      "recall": 0.9202384788913954,
+      "f1": 0.9310401043364852,
+      "roc_auc": 0.9948361332239204,
+      "pr_auc": 0.9851357058006351,
+      "brier": 0.02381406545352088,
+      "balanced_acc": 0.951407832714833,
+      "confusion": [
+        [
+          39590,
+          702
+        ],
+        [
+          990,
+          11422
+        ]
+      ]
+    }
+  ],
+  "selected": "GradientBoosting",
+  "selection_policy": "PR-AUC within 1% of best, then lowest Brier, then simpler model"
+}

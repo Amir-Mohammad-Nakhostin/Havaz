@@ -1,0 +1,16 @@
+feature_schema_version: environmental-v1
+features:
+  - temperature
+  - apparentTemperature
+  - humidity
+  - precipitationAmount
+  - snowfall
+  - windSpeed
+  - pm25
+  - pm10
+  - aqi
+  - o3
+  - no2
+  - hour
+  - month
+notes: "Environmental research schema. rainProbability removed (forecast-only, not in archive). activityIntensity/durationMinutes removed (no historical ground truth; they stay in the Havaz decision layer)."

@@ -1,0 +1,12 @@
+{
+  "datasetVersion": "1.0.0",
+  "labelDefinitionVersion": "utci-strong-v1",
+  "featureSchemaVersion": "environmental-v1",
+  "buildTimestampUtc": "2026-09-01T19:11:40.518180+00:00",
+  "thermofeelVersion": "2.3.0",
+  "sources": {
+    "weather": "https://archive-api.open-meteo.com/v1/archive",
+    "air_quality": "https://air-quality-api.open-meteo.com/v1/air-quality"
+  },
+  "gateFailures": []
+}

@@ -1,0 +1,11 @@
+target:
+  name: heat_stress_elevated
+  type: binary
+  definition: "UTCI > 32 degC (strong heat stress or higher), same-hour"
+  positive_class: "utci_strong_or_above"
+  negative_class: "utci_moderate_or_below"
+  horizon: same-hour
+  observation_unit: location-hour
+  label_source: "UTCI category scale (published); computed via ECMWF thermofeel from ERA5 hourly meteorology"
+  label_definition_version: utci-strong-v1
+  threshold_utci_c: 32.0

@@ -1,0 +1,908 @@
+[
+  {
+    "file": "weather_Tehran_2019.json",
+    "retrieved_utc": "2026-09-01T19:07:52.415442+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tehran_2020.json",
+    "retrieved_utc": "2026-09-01T19:07:56.514229+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tehran_2021.json",
+    "retrieved_utc": "2026-09-01T19:07:59.678939+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tehran_2022.json",
+    "retrieved_utc": "2026-09-01T19:08:02.838096+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tehran_2023.json",
+    "retrieved_utc": "2026-09-01T19:08:06.190162+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tehran_2024.json",
+    "retrieved_utc": "2026-09-01T19:08:09.732638+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tehran_2025.json",
+    "retrieved_utc": "2026-09-01T19:08:13.434659+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "aq_Tehran_2021.json",
+    "retrieved_utc": "2026-09-01T19:08:16.289575+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tehran_2022.json",
+    "retrieved_utc": "2026-09-01T19:08:19.235270+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tehran_2023.json",
+    "retrieved_utc": "2026-09-01T19:08:22.198920+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tehran_2024.json",
+    "retrieved_utc": "2026-09-01T19:08:25.170684+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tehran_2025.json",
+    "retrieved_utc": "2026-09-01T19:08:28.161362+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 35.6892,
+      "longitude": 51.389,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2019.json",
+    "retrieved_utc": "2026-09-01T19:08:31.373522+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2020.json",
+    "retrieved_utc": "2026-09-01T19:08:34.531512+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2021.json",
+    "retrieved_utc": "2026-09-01T19:08:37.700500+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2022.json",
+    "retrieved_utc": "2026-09-01T19:08:40.865277+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2023.json",
+    "retrieved_utc": "2026-09-01T19:08:44.275140+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2024.json",
+    "retrieved_utc": "2026-09-01T19:08:49.218915+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Shiraz_2025.json",
+    "retrieved_utc": "2026-09-01T19:08:52.637651+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "aq_Shiraz_2021.json",
+    "retrieved_utc": "2026-09-01T19:08:55.452070+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Shiraz_2022.json",
+    "retrieved_utc": "2026-09-01T19:08:58.429423+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Shiraz_2023.json",
+    "retrieved_utc": "2026-09-01T19:09:01.389639+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Shiraz_2024.json",
+    "retrieved_utc": "2026-09-01T19:09:04.346210+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Shiraz_2025.json",
+    "retrieved_utc": "2026-09-01T19:09:07.309005+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 29.5918,
+      "longitude": 52.5837,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2019.json",
+    "retrieved_utc": "2026-09-01T19:09:10.561853+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2020.json",
+    "retrieved_utc": "2026-09-01T19:09:13.721015+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2021.json",
+    "retrieved_utc": "2026-09-01T19:09:16.884791+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2022.json",
+    "retrieved_utc": "2026-09-01T19:09:20.077600+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2023.json",
+    "retrieved_utc": "2026-09-01T19:09:23.543920+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2024.json",
+    "retrieved_utc": "2026-09-01T19:09:26.928039+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Isfahan_2025.json",
+    "retrieved_utc": "2026-09-01T19:09:30.343694+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "aq_Isfahan_2021.json",
+    "retrieved_utc": "2026-09-01T19:09:33.174175+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Isfahan_2022.json",
+    "retrieved_utc": "2026-09-01T19:09:36.133349+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Isfahan_2023.json",
+    "retrieved_utc": "2026-09-01T19:09:39.094101+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Isfahan_2024.json",
+    "retrieved_utc": "2026-09-01T19:09:42.208326+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Isfahan_2025.json",
+    "retrieved_utc": "2026-09-01T19:09:45.259231+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 32.6546,
+      "longitude": 51.668,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2019.json",
+    "retrieved_utc": "2026-09-01T19:09:48.445549+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2020.json",
+    "retrieved_utc": "2026-09-01T19:09:51.742266+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2021.json",
+    "retrieved_utc": "2026-09-01T19:09:54.916942+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2022.json",
+    "retrieved_utc": "2026-09-01T19:09:58.215273+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2023.json",
+    "retrieved_utc": "2026-09-01T19:10:01.640737+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2024.json",
+    "retrieved_utc": "2026-09-01T19:10:05.112120+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Mashhad_2025.json",
+    "retrieved_utc": "2026-09-01T19:10:08.622372+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "aq_Mashhad_2021.json",
+    "retrieved_utc": "2026-09-01T19:10:11.437429+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Mashhad_2022.json",
+    "retrieved_utc": "2026-09-01T19:10:14.384029+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Mashhad_2023.json",
+    "retrieved_utc": "2026-09-01T19:10:17.347874+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Mashhad_2024.json",
+    "retrieved_utc": "2026-09-01T19:10:20.315563+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Mashhad_2025.json",
+    "retrieved_utc": "2026-09-01T19:10:23.267677+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 36.2605,
+      "longitude": 59.6168,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2019.json",
+    "retrieved_utc": "2026-09-01T19:10:26.599120+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2020.json",
+    "retrieved_utc": "2026-09-01T19:10:29.755356+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2021.json",
+    "retrieved_utc": "2026-09-01T19:10:32.917243+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2022.json",
+    "retrieved_utc": "2026-09-01T19:10:36.088123+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2023.json",
+    "retrieved_utc": "2026-09-01T19:10:39.539781+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2024.json",
+    "retrieved_utc": "2026-09-01T19:10:42.919693+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Ahvaz_2025.json",
+    "retrieved_utc": "2026-09-01T19:10:46.216002+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "aq_Ahvaz_2021.json",
+    "retrieved_utc": "2026-09-01T19:10:49.034952+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Ahvaz_2022.json",
+    "retrieved_utc": "2026-09-01T19:10:52.008251+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Ahvaz_2023.json",
+    "retrieved_utc": "2026-09-01T19:10:55.096609+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Ahvaz_2024.json",
+    "retrieved_utc": "2026-09-01T19:10:58.211673+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Ahvaz_2025.json",
+    "retrieved_utc": "2026-09-01T19:11:01.169469+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 31.3183,
+      "longitude": 48.6706,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2019.json",
+    "retrieved_utc": "2026-09-01T19:11:04.353175+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2020.json",
+    "retrieved_utc": "2026-09-01T19:11:07.517518+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2021.json",
+    "retrieved_utc": "2026-09-01T19:11:10.666385+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2022.json",
+    "retrieved_utc": "2026-09-01T19:11:13.818789+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2023.json",
+    "retrieved_utc": "2026-09-01T19:11:17.284547+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2024.json",
+    "retrieved_utc": "2026-09-01T19:11:20.809981+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "weather_Tabriz_2025.json",
+    "retrieved_utc": "2026-09-01T19:11:24.145559+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC",
+      "wind_speed_unit": "kmh"
+    }
+  },
+  {
+    "file": "aq_Tabriz_2021.json",
+    "retrieved_utc": "2026-09-01T19:11:26.977713+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2021-01-01",
+      "end_date": "2021-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tabriz_2022.json",
+    "retrieved_utc": "2026-09-01T19:11:29.929892+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tabriz_2023.json",
+    "retrieved_utc": "2026-09-01T19:11:32.885827+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tabriz_2024.json",
+    "retrieved_utc": "2026-09-01T19:11:35.849071+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "timezone": "UTC"
+    }
+  },
+  {
+    "file": "aq_Tabriz_2025.json",
+    "retrieved_utc": "2026-09-01T19:11:38.799144+00:00",
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "params": {
+      "latitude": 38.0962,
+      "longitude": 46.2738,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "timezone": "UTC"
+    }
+  }
+]

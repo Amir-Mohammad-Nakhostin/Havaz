@@ -1,0 +1,63 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: havaz
+      POSTGRES_USER: havaz
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-havaz-local-dev-password}
+    volumes:
+      - havaz-pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U havaz -d havaz"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  ml:
+    build:
+      context: .
+      dockerfile: ml/Dockerfile
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request;urllib.request.urlopen('http://localhost:8001/health')\""]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=havaz;Username=havaz;Password=${POSTGRES_PASSWORD:-havaz-local-dev-password}
+      Ml__BaseUrl: http://ml:8001/
+      Providers__WeatherBaseUrl: https://api.open-meteo.com/
+      Providers__AirQualityBaseUrl: https://air-quality-api.open-meteo.com/
+      Diagnostics__Enabled: "false"
+      Cors__AllowedOrigins__0: http://localhost:3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ml:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8080
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "3000:80"
+
+volumes:
+  havaz-pgdata:

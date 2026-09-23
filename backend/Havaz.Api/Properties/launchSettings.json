@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Havaz.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:10895;http://localhost:10896"
+    }
+  }
+}
