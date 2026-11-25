@@ -1,6 +1,27 @@
 # HAVAZ
 
-AI-powered outdoor activity planning and environmental risk assessment for Persian-first users.
+**Environmental intelligence for outdoor activity planning.**
+
+HAVAZ is a Persian-first software prototype that combines a web application, a .NET backend and a separate Python machine-learning service to support environmental risk assessment.
+
+## Project at a glance
+
+| Layer | Technology |
+| --- | --- |
+| Web interface | React / TypeScript |
+| Application backend | ASP.NET Core / .NET 8 |
+| ML service | Python / FastAPI |
+| Database | PostgreSQL |
+| Local deployment | Docker Compose |
+| Weather data attribution | Open-Meteo |
+
+## Engineering focus
+
+- Separate application and ML services.
+- Reproducible local setup and database migrations.
+- Environmental data integration and risk estimation.
+
+**Status:** Development prototype. See `docs/` for implementation details and limitations. The risk estimates are not a guarantee of outdoor safety. Model accuracy and production readiness are not asserted here.
 
 ## Run locally
 
